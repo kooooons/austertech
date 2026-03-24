@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 80" width="320" height="80">
+  <rect width="320" height="80" fill="#04060f"/>
+  <text
+    x="16"
+    y="60"
+    font-family="'Syne', 'Inter', 'Helvetica Neue', Arial, sans-serif"
+    font-size="58"
+    font-weight="800"
+    letter-spacing="-2"
+  ><tspan fill="#ffffff">Aust</tspan><tspan fill="#5b8aff">er</tspan></text>
+</svg>
