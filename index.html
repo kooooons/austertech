@@ -7,7 +7,7 @@
   <meta name="description" content="Auster builds fast, professional websites and provides reliable hosting for modern businesses." />
   <meta name="theme-color" content="#04060f" />
   <link rel="preconnect" href="https://fonts.bunny.net" crossorigin />
-  <link href="https://fonts.bunny.net/css?family=inter:400,500,600|syne:600,700,800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.bunny.net/css?family=inter:400,500,600|geist:600,700,800&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -25,7 +25,7 @@
       --muted: #6875a0;
       --white: #ffffff;
       --radius: 14px;
-      --font-display: 'Syne', sans-serif;
+      --font-display: 'Geist', sans-serif;
       --font-body: 'Inter', sans-serif;
     }
 
@@ -724,7 +724,7 @@
   </div>
 </footer>
 
-<!-- CONTACT FORM -->
+<!-- CONTACT FORM v3 -->
 <script>
   (function () {
     const form = document.getElementById('contactForm');
@@ -747,10 +747,10 @@
         btn.disabled = true;
       btn.textContent = 'Sending…';
 
-      fetch(form.action, {
+      fetch('https://auster-mailer.sortland199.workers.dev/api/contact', {
         method: 'POST',
-        body: new FormData(form),
-        headers: { 'Accept': 'application/json' }
+        headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name: name, email: email, message: message })
       })
       .then(function (res) {
         if (res.ok) {
